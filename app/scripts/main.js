@@ -79,4 +79,5 @@
     }
   });
 
+  $('.ui-slider-handle').draggable();
 })(jQuery);

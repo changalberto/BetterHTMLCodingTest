@@ -6,10 +6,11 @@
     "modernizr": "~2.8.1",
     "bourbon": "^4.2.6",
     "neat": "^1.7.4",
+    "sugar": "^1.4.1",
     "slideout.js": "^0.1.12",
     "jquery-ui": "jquery.ui#^1.11.4",
     "jquerymy": "^1.2.4",
-    "sugar": "^1.4.1"
+    "jqueryui-touch-punch": "*"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -28,6 +29,7 @@
         "ui/core.js",
         "ui/widget.js",
         "ui/mouse.js",
+        "ui/draggable.js",
         "ui/slider.js"
       ]
     }
