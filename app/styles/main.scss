@@ -336,6 +336,17 @@ nav {
       z-index: 10;
     }
   }
+
+  @include media($desktop) {
+    &.slideout-menu {
+      width: 262px;
+      position: fixed;
+      top: 64px + 32px;
+      left: 0;
+      display: inline-block !important;
+      z-index: 10;
+    }
+  }
 }
 
 header {

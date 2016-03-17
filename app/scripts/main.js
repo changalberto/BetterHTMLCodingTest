@@ -28,7 +28,7 @@
     },
     ui: {
       '[name=price]': {
-        bind: function(data, value, $control) {
+        bind: function(data) {
           return data.price.format(0);
         },
         watch: '.price-range'
@@ -52,13 +52,13 @@
         watch: '.percent-range'
       },
       '[name=value]': {
-        bind: function(data, value, $control) {
+        bind: function(data) {
           $cars.hide();
           $cars.filter(function() {
-            var _value = data.price * (data.percent / 100);
-            return ((+$(this).attr('data-value')  > _value) && ($(this).attr('data-price') < data.price));
+            var value = data.price * (data.percent / 100);
+            return (($(this).attr('data-value') >= value) && ($(this).attr('data-price') <= data.price));
           }).show();
-          return (data.price  * (data.percent / 100)).format(0);
+          return (data.price * (data.percent / 100)).format(0);
         },
         watch: '.percent-range, .price-range'
       },
