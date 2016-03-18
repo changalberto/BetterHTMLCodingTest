@@ -41,7 +41,11 @@
             min: 0,
             max: 100000,
             values: this.price,
-            step: 1
+            step: 1,
+            create: function(e, ui) {
+              ui.$limit = $('<span class="limit"></span>').appendTo(this);
+              ui.$limit.width('100%');
+            }
           });
         },
         bind: 'price',
@@ -70,7 +74,11 @@
             min: 0,
             max: 100,
             values: this.percent,
-            step: 1
+            step: 1,
+            create: function(e, ui) {
+              ui.$limit = $('<span class="limit"></span>').appendTo(this);
+              ui.$limit.width('100%');
+            }
           });
         },
         bind: 'percent',
@@ -78,6 +86,4 @@
       }
     }
   });
-
-  $('.ui-slider-handle').draggable();
 })(jQuery);
